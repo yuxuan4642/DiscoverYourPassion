@@ -1,0 +1,38 @@
+不知道其他团队在软件开发的过程中有没有要求做code review，我们team是一直要求做，但是一直都没有做的起来。
+刚开始的时候，风风火火的定义代码规则，每周review代码，最后就变成了一种形式，因为大家无心看，也不想看，也看不出来什么。
+打开每个merge request，对比下差异，然后发现也没有什么好看的，一行两行的差异看不出什么，然后也没有上下文，也没有逻辑关系，纯粹变成了看看代码有没有拼写错误，有没有大小写。
+这样的code review最后大家都不想参加，更没有人愿意组织。这样，一过就是很多年。
+作为SM，其实我也不知道该怎么去推这件事情，久而久之就不了了之。
+
+今天有个customer issue，然后rootcause是有人在做功能的时候，写了删除脚本，把客户定制化的一些东西给删除了，导致升级失败。
+我的第一反应是程序员要删库跑路吗？开玩笑的。第二反应就是当时的提交没有人审核吗？第三个反应就是这个可以通过code review看出来吗？
+因为有了这个问题，我就又AI了，code review的益处谁都知道，说些不痛不痒的根本没有什么用。所以，还是得先干起来再说。
+记得上一次要求code review的时候，有人问review的标准是什么，到底看什么，所以我又AI了，结合AI给的意见和建议，我做了一些删选，然后按不同功能组织了几场会议，暂且看看下周会议的效果吧。
+
+写着写着，我突然想到一句话，就是上次去杭州参加敏捷大会的时候，有个老师说，要通过输出倒逼输入。现在觉得挺有道理的，因为其实我们从小到大的教育都是输入型的，不管你会不会，也不管你是不是喜欢，反正就是按大纲要求灌给学生就对了。
+到了工作中，特别是我们这块，其实也是个拧螺丝的，不需要你太多创造和别出心裁，按部就班实现功能就行。有一些topic，有一些话题和技术，但是对输出并没有什么要求，而且也是很难得的机会要求输出。
+换句话说，在那过去的四十加年中，主动去学的太少了（也许只有我是这样吧）。工作要求不高，混着就行了。虽然内心不希望混着，可身体很现实的混着，混了一年又一年，转眼已经在这个坑待了十几年。
+不是没有想过出去，换个环境，前几年也去面试，也拿到了一些机会，但是可能还是害怕改变吧，最终选择了留下，这一留就把自己留在了日复一日的重复劳动中，留在了岁月中，留在了遗憾中。。。也许换一个也是遗憾呢，哈哈哈，这就是喜欢找借口的人常用的理由吧。
+
+1. Functionality
+   - Does the code implement the expected functionality per requirements and design?	
+   - DAre normal and edge cases, including error scenarios, covered?	
+   - DIs the logic clear without missing important steps?	
+2. Code Quality & Maintainability	
+   - DIs the code structure clear and reasonable, with single responsibility for functions/classes?	
+   - Is there any duplicate code or opportunities for refactoring?	
+   - Are variable, function, and class names meaningful and follow conventions?	
+3. Code Style Consistency
+   - Does the code follow team coding standards (indentation, naming, comments style, etc.)?	
+   - Are comments sufficient and clear?	
+   - Is the code formatting tidy and easy to read?	
+4. Performance	
+   - Are there any obvious performance bottlenecks?	
+   - Are resources (memory, file handles, etc.) used and released properly?	
+5. Security	
+   - Are inputs validated properly to prevent vulnerabilities?	
+6. Error Handling	
+   - Is there proper exception handling?	
+   - Does the program safely recover or exit on errors?	
+7. Commit Info	
+   - Is the PR description clear and does it explain the purpose and impact?	
