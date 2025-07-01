@@ -36,3 +36,12 @@
    - Does the program safely recover or exit on errors?	
 7. Commit Info	
    - Is the PR description clear and does it explain the purpose and impact?	
+
+
+2025-07-01
+过去的三周一直在瞎忙，对于code reivew是按计划进行了，但是并没有用到这些metrics。
+根据不同的功能进行了几场不同的会议，大家对每个功能是相对了解或者是有相关user story的才邀请进来。
+这样的好处是大家对这个功能是相对了解的，看起代码来也比较容易理解，从这个层面来讲其实是还可以的。
+
+唯一觉得有意义的就是相关人员一起看代码，这样可能还有点意义吧，不然纯粹浪费时间。但是否能review出什么问题来，那就是随机的事情了。
+如果硬要挑毛病，可能也还是在代码规则这块吧。
